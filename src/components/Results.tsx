@@ -16,7 +16,7 @@ const Results = ({ data }: ResultsType) => {
   const value = Math.floor(Math.random() * 100);
 
   const sendData = () => {
-    Telegram.sendData(`${data.name} & ${data.crushName}: ${value}% compatible`)
+    Telegram.sendData({data: `${data.name} & ${data.crushName}: ${value}% compatible`, button_text: 'TEST'})
   }
 
   useEffect(() => {
