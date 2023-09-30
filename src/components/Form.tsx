@@ -36,12 +36,14 @@ const Form = ({ handleSubmit }: FormPropType) => {
   };
 
   useEffect(() => {
-    Telegram.enableClosingConfirmation();
-    Telegram.MainButton.show()
-      .enable()
-      .setParams({ color: "#ff5555" })
-      .setText("Check Compatibility")
-      .onClick(() => onSubmit());
+    Telegram.enableClosingConfirmation()
+    Telegram.expand()
+    Telegram.setHeaderColor('#ff5555')
+    // Telegram.MainButton.show()
+    //   .enable()
+    //   .setParams({ color: "#ff5555" })
+    //   .setText("Check Compatibility")
+    //   .onClick(() => onSubmit());
   }, []);
 
   return (
@@ -69,7 +71,7 @@ const Form = ({ handleSubmit }: FormPropType) => {
           <label htmlFor="crushName">Your Crush's Name</label>
           <input
             type="text"
-            placeholder="Enter your name here"
+            placeholder="Enter your crush's name here"
             name="crushName"
             value={formData.crushName}
             onChange={(e) => handleChange(e)}
