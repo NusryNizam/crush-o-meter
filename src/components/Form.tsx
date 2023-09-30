@@ -25,11 +25,11 @@ const Form = ({ handleSubmit }: FormPropType) => {
   };
 
   const onSubmit = () => {
+    handleSubmit(formData);
     if (formData.name === "" || formData.crushName === "") {
-      alert("Enter your names first");
+      // alert("Enter your names first");
       Telegram.showAlert("Enter your names to check compatibility");
     } else {
-      handleSubmit(formData);
       setFormData({ name: "", crushName: "" });
       navigate("/results");
     }
