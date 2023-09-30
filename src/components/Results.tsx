@@ -10,14 +10,14 @@ type ResultsType = {
 };
 
 const Results = ({ data }: ResultsType) => {
-  const Telegram = (window as any).Telegram.WebApp
+  // const Telegram = (window as any).Telegram.WebApp
 
   const navigate = useNavigate();
   const value = Math.floor(Math.random() * 100);
 
-  const sendData = () => {
-    Telegram.sendData({data: `${data.name} & ${data.crushName}: ${value}% compatible`, button_text: 'TEST'})
-  }
+  // const sendData = () => {
+  //   Telegram.sendData({data: `${data.name} & ${data.crushName}: ${value}% compatible`, button_text: 'TEST'})
+  // }
 
   useEffect(() => {
     // Telegram.MainButton.show()
@@ -47,7 +47,7 @@ const Results = ({ data }: ResultsType) => {
           id="secondary-btn"
           value="PLAY AGAIN"
         />
-        <input type="button" value="SHARE WITH FRIENDS" onClick={sendData}/>
+        {/* <input type="button" value="SHARE WITH FRIENDS" onClick={sendData}/> */}
       </div>
     </div>
     </>
