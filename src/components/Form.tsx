@@ -12,41 +12,47 @@ export type FormDataType = {
 };
 
 const Form = ({ handleSubmit }: FormPropType) => {
-  const Telegram = (window as any).Telegram.WebApp
+  const Telegram = (window as any).Telegram.WebApp;
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormDataType>({
     name: "",
     crushName: "",
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-  
+
   const onSubmit = () => {
-    handleSubmit(formData);
-    setFormData({name: '', crushName: ''})
-    navigate('/results')
-  }
+    if (formData.name === "" || formData.crushName === "") {
+      alert("Enter your names first");
+      Telegram.showAlert("Enter your names to check compatibility");
+    } else {
+      handleSubmit(formData);
+      setFormData({ name: "", crushName: "" });
+      navigate("/results");
+    }
+  };
 
   useEffect(() => {
-    Telegram.enableClosingConfirmation()
+    Telegram.enableClosingConfirmation();
     Telegram.MainButton.show()
-    .enable()
-    .setParams({color: '#ffadad'})
-    .setText('Check Compatibility')
-    .onClick(() => onSubmit())
-  },[])
-
+      .enable()
+      .setParams({ color: "#ff5555" })
+      .setText("Check Compatibility")
+      .onClick(() => onSubmit());
+  }, []);
 
   return (
     <div className="form-container">
       <h2 className="title">Check your love compatibility</h2>
       <form
         className="input-form"
-        onSubmit={(e) => {e.preventDefault(); onSubmit}}
+        onSubmit={(e) => {
+          e.preventDefault();
+          onSubmit();
+        }}
       >
         <div className="input-group">
           <label htmlFor="name">Your Name</label>
