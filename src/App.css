@@ -1,0 +1,30 @@
+.App {
+  max-width: 400px;
+  margin: auto;
+  border: 1px solid #ff8f8f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #ffb6b6;
+  background-image: url("./assets/bg.png");
+}
+
+.logo {
+  text-align: center;
+  padding: 1rem;
+  flex: 1;
+}
+
+.logo img {
+  max-width: 200px;
+}
+
+.title {
+  text-align: center;
+  padding: 1rem 2rem;
+  color: #350e0e;
+}

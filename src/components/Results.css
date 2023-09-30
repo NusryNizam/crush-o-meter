@@ -1,0 +1,24 @@
+.number {
+    font-size: 5rem;
+    color: #FF5B5B;
+}
+
+.result-btn-container {
+    margin-block: 3rem 1rem;
+}
+.result-btn-container input {
+    margin-top: 0 !important;
+
+}
+
+#secondary-btn {
+    background-color: white;
+    border: none;
+    box-shadow: inset 0px 4px 18px rgba(0, 0, 0, 0.235),
+    inset 0px -8px 18px rgba(47, 47, 47, 0.275);
+    color: #350e0e;
+}
+
+.names {
+    color: #350e0e;
+}

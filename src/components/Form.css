@@ -1,0 +1,45 @@
+.input-form {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  /* align-items: center; */
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.input-group input {
+  padding: 16px;
+  border-radius: 24px;
+  border: 1px solid #ff9696;
+  background-color: #ffadad;
+  font-family: "Kaushan Script";
+  text-align: center;
+}
+
+.input-group input[type="submit"], .input-group input[type="button"] {
+  margin-top: 2rem;
+  background-color: #ff5555;
+  box-shadow: inset 0px 8px 18px rgba(255, 255, 255, 0.275),
+    inset 0px -8px 18px rgba(0, 0, 0, 0.434);
+  cursor: pointer;
+  margin-top: 2rem;
+  color: white;
+}
+
+.input-group input[type="submit"]:active, .input-group input[type="button"]:active {
+  background-color: #ff5555;
+  box-shadow: inset 0px 8px 18px rgba(0, 0, 0, 0.434),
+    inset 0px -8px 18px rgba(255, 255, 255, 0.275);
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
